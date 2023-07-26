@@ -15,9 +15,16 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+
                 </div>
+
+
+                <a href="{{ route('todo.index') }}">todo list</a>
+
             </div>
         </div>
     </div>
 </div>
+
 @endsection
