@@ -60,9 +60,9 @@
                         </span>
                     </td>
                     <td>
-                        <a class="btn btn-primary" href="{{ route('todo.edit', [ 'todo' => $todo->id ]) }}" role="button">Edit</a>
-                        <a class="btn btn-secondary" href="{{ route('todo.show', [ 'todo' => $todo->id ]) }}" role="button">Show</a>
-                        <a class="btn btn-danger" onclick="event.preventDefault();
+                        <a class="btn btn-primary  btn-sm" href="{{ route('todo.edit', [ 'todo' => $todo->id ]) }}" role="button">Edit</a>
+                        <a class="btn btn-secondary  btn-sm" href="{{ route('todo.show', [ 'todo' => $todo->id ]) }}" role="button">Show</a>
+                        <a class="btn btn-danger btn-sm" onclick="event.preventDefault();
                                                      document.getElementById('delete-form').submit();" href="{{ route('todo.destroy', [ 'todo' => $todo->id ]) }}" role="button">Delete</a>
 
                         <form action="{{ route('todo.destroy', [ 'todo' => $todo->id ]) }}" id="delete-form" method="POST">

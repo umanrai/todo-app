@@ -13,7 +13,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        $todos = Todo::latest()->paginate(10);
+        $todos = Todo::where('user_id', '=', auth()->user()->id)->orderBy('created_at', 'DESC')->paginate(10);
         return view('todo.index')->with('todos', $todos);
     }
 
@@ -30,7 +30,11 @@ class TodoController extends Controller
      */
     public function store(StoretodoRequest $request)
     {
-        Todo::create($request->all());
+        Todo::create([
+            'todo'          => ucwords($request->get('todo')), // Dasdsad Asdsadas Array
+            'description'   => $request->get('description'),
+            'user_id'       => auth()->user()->id,
+        ]);
         return back();
     }
 

@@ -22,12 +22,13 @@
         @csrf
 
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Todo</label>
-            <input name="todo" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="todo" class="form-label">Todo</label>
+            <input id="todo" placeholder="Enter your todo" name="todo" type="text" class="form-control" >
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Description</label>
-            <textarea name="description" class="form-control" id="" cols="30" rows="10"></textarea>
+            <label for="description-text" class="form-label">Description</label>
+            <textarea id="description-text" placeholder="Enter your description" name="description"
+                      class="form-control" cols="30" rows="3"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
